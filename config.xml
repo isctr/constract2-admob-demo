@@ -15,8 +15,6 @@
 	<preference name="AllowInlineMediaPlayback" value="true" />
 	<preference name="phonegap-version" value="cli-8.0.0">
 
-	
-
 	<preference name="deployment-target" value="10.0" />
 	<preference name="android-minSdkVersion" value="21" />
 	<access origin="*" />
@@ -29,9 +27,6 @@
 		<variable name="ADMOB_APP_ID" value="ca-app-pub-3940256099942544~3347511713">
 
 	</plugin>
-	
-
-
 	
 	<engine name="android" />
 </widget>
