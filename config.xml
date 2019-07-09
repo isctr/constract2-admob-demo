@@ -9,24 +9,32 @@
 
 	<preference name="android-targetSdkVersion" value="26" />
 
-	<preference name="orientation" value="portrait" />
+	<preference name="orientation" value="landscape" />
 	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="AllowInlineMediaPlayback" value="true" />
-  <preference name="phonegap-version" value="cli-8.0.0">
 
-	<preference name="deployment-target" value="8.0" />
-	<preference name="android-minSdkVersion" value="21" />
+	<config-file parent="UIStatusBarHidden" platform="ios" target="*-Info.plist"><true/></config-file>
+	<config-file parent="UIViewControllerBasedStatusBarAppearance" platform="ios" target="*-Info.plist"><false/></config-file>
+	<gap:config-file platform="android" parent="/manifest" mode="delete"> <uses-permission android:name="android.permission.READ_PHONE_STATE"/> </gap:config-file>
+
+
+
+	<preference name="deployment-target" value="10.0" />
+	<preference name="android-minSdkVersion" value="24" />
 	<access origin="*" />
 
 	<plugin name="cordova-custom-config" />
+	<plugin name="cordova-plugin-ad-admob" />
+	<plugin name="cordova-plugin-file" />
+	<plugin name="cordova-plugin-media" />
 	<plugin name="cordova-plugin-statusbar" />
 	<plugin name="cordova-plugin-whitelist" />
-	<plugin name="cordova-plugin-admob-free">
-		<variable name="ADMOB_APP_ID" value="ca-app-pub-3940256099942544~3347511713">
-	</plugin>
+	<plugin name="cordova-plugin-wkwebview-engine" />
+	<plugin name="cordova-build-architecture" spec="https://github.com/MBuchalik/cordova-build-architecture.git#v1.0.1" source="git" />
 
 
 
+	<engine name="ios" />
 	<engine name="android" />
 </widget>
